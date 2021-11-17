@@ -1,0 +1,13 @@
+{% import "macros/page.html" as page_macros %}
+{% extends "index.html" %}
+
+{% block title %}{{ section.title }}{% endblock %}
+{% block content %}
+<article class="post">
+<center>
+	<div class="content">
+		{{ section.content | safe }}
+	</div>
+</center>
+</article>
+{% endblock content %}

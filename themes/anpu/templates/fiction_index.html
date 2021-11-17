@@ -1,0 +1,25 @@
+{% import "macros/page.html" as page_macros %}
+{% extends "index.html" %}
+
+{% block title %}{{ section.title }}{% endblock %}
+{% block content %}
+<article class="post">
+	<header>
+		<h1>{{ section.title }}</h1>
+	</header>
+	<main id="main" tabindex="-1">
+		
+			{% if paginator.pages %}
+			{% for page in paginator.pages %}
+				{{ page_macros::blog_listing(page=page) }}
+			{% endfor %}
+			{{ page_macros::page_pagination(paginator=paginator) }}
+			{% endif %}
+		
+	</main>
+	<div class="content">
+		{{ section.content | safe }}
+	</div>
+
+</article>
+{% endblock content %}
