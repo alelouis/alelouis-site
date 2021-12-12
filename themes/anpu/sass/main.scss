@@ -1,7 +1,9 @@
 /* Basic */
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+
 html {
-    font-family: -apple-system, BlinkMacSystemFont, 'Montserrat', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Source Code Pro', -apple-system, BlinkMacSystemFont, 'Montserrat', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* 1 */
     -ms-text-size-adjust: 100%;
     /* 2 */
@@ -11,11 +13,13 @@ html {
 
 body {
     margin: 0;
-    background: #ffffff;
-    color: #333;
+    background: #1e1d22;
+    color: rgb(143, 136, 156);
     font-size: 18px;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 article,
@@ -59,7 +63,7 @@ h3 {
 /* Links */
 
 a {
-    color: #0157b4;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -70,16 +74,16 @@ a:hover {
 
 a:hover,
 a:focus {
-    color: #0157b4;
+    color: #ffffff;
 }
 
 a:active {
-    color: #0157b4;
+    color: #ffffff;
     opacity: 0.9;
 }
 
 a.active {
-    color: #0157b4;
+    color: #ffffff;
 }
 
 a.skip-main {
@@ -127,7 +131,7 @@ th, td {
 /* Code */
 pre {
     padding: 1em;
-    background-color: #f1f1f1;
+    background-color: rgb(120, 115, 131);
     max-width: 100%;
     overflow: auto;
 }
@@ -135,9 +139,10 @@ pre {
 code,
 pre,
 kbd {
-    font-family: monospace;
-    font-size: 0.90em;
+    font-family: 'JuliaMono';
+    font-size: 0.9em;
     line-height: 154%;
+    border-radius: 8px;
 }
 
 /* Styles */
@@ -195,7 +200,7 @@ header nav a {
 }
 
 header a {
-    color: #333;
+    color: rgb(120, 115, 131);
 }
 
 .site-header {
@@ -219,7 +224,7 @@ main h1 {
 
 
 article:not(:last-of-type) {
-    border-bottom: thin solid #f1f1f1;
+    border-bottom: thin solid rgb(120, 115, 131);
     padding-bottom: 2em;
 }
 
@@ -238,8 +243,9 @@ article header h1 a {
 
 .article-info {
     font-size: 0.75em;
-    color: grey;
+    color: rgb(181, 174, 196);
     margin-top: 1em;
+    text-shadow: 0 0 10px #cac2f05d;
 }
 
 .article-info a {
@@ -301,7 +307,7 @@ article img {
     display: block;
     height: 1px;
     border: 0;
-    border-top: thin solid #f1f1f1;
+    border-top: thin solid rgb(120, 115, 131);
     width: 25%;
     margin: 1em auto;
 }
@@ -320,6 +326,10 @@ article img {
     list-style-type: none;
     padding: 0;
     line-height: 2em;
+}
+
+.space {
+    margin: 3em;
 }
 
 /* Pagination */
@@ -355,7 +365,7 @@ article img {
 /* Footer */
 
 footer {
-    border-top: thin solid #f1f1f1;
+    border-top: thin solid rgb(120, 115, 131);
     margin-top: 3em;
     font-size: 16px;
 }
