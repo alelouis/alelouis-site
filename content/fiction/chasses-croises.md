@@ -1,4 +1,5 @@
 ---
+template: fiction_page.html
 title: Chassés Croisés
 author: Alexis LOUIS
 date: 2020-09-09

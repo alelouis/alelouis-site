@@ -1,7 +1,6 @@
 ---
 title: Moving stars (in fact Earth but who cares)
 ---
-<img style="margin: 0 auto; display: block; width : 100%;" src="../../images/sky-plot/starbanner.svg">
 
 Only a few things are better than just looking at a clear sky for bright stars. In this what seems to be a perfectly still deep space picture, many things are in fact happening. Those who have played with long exposure photography know that the imperceptible earth rotation can reveal beautiful star movements patterns. We may also observe fast transiting bright spots, satellites. Some of what we call stars are in fact planets, or even geostationary satellites.
 

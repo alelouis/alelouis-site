@@ -1,0 +1,42 @@
+{% import "macros/page.html" as page_macros %}
+{% extends "index.html" %}
+{% block content %}
+
+<script>
+
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.height = scrolled + "%";
+} 
+
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+} 
+</script>
+
+
+
+<article class="post">
+    <div class="header-scroll">
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="fiction">
+        {{ page.content | linebreaksbr | safe}}
+        </div>
+    </div>
+    <a onclick="topFunction()" style="cursor:pointer;">Get back to top
+        <img style="margin: -0.2em 0; display: inline; width : 1em;" src="../../images/icons/corner-right-up-outline.svg">
+    </a> 
+    {{ page_macros::page_info(page=page) }}
+    
+</article>
+
+{% endblock content %}

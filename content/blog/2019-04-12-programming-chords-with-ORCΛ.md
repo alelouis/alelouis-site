@@ -1,7 +1,6 @@
 ---
 title: Programming Chords With ORCΛ
 ---
-<img style="margin: 0 auto; display: block; width : 100%;" src="../../images/orca/orca_banner.png">
 
 ORCΛ is a live programming environment, a bit like a cellular automata, where a grid of operators are triggered and/or triggering state changes. The originality of ORCΛ is that every operator are represented as letter (from A to Z), each one having a particular role [(list here)](https://github.com/hundredrabbits/Orca). If you ever played Factorio, programming in ORCΛ feels a bit like playing Factorio. The build-in capabilities of MIDI and UDP sends clearly shows that it was developed in the objective of serving some musical production purpose, but really you could illuminate LEDs, controls motors or do anything interactive with it. It still has to be demonstrated that you can code nearly every function with it (work in progress...) but I'm pretty confident you could (at the cost of a lot of time and dedication).
 
@@ -20,17 +19,17 @@ ORCΛ encourages you to automate thing as well as interact with the interface. S
 
 ## Program implementation
 
-The twelve tones that can be understood by ORCΛ are defined as : {C, c, D, d, E, e, F, f, G, g, A, a, B, b}. It doesn't adds up to twelve because e (=E#) is enharmonic to F, as well as b (=B#) to C. It makes no difference to use one or another in the actual implementation.
+The twelve tones that can be understood by ORCΛ are defined as : **{C, c, D, d, E, e, F, f, G, g, A, a, B, b}**. It doesn't adds up to twelve because e (=E#) is enharmonic to F, as well as b (=B#) to C. It makes no difference to use one or another in the actual implementation.
 
 Because you can count from 0 to z  in ORCΛ and that uppercases are interpreted as lowercases in value, you can't simply add 4 to C to get a D, you would get the result of the operation c + 4, which is d. We can bypass this limitation by first assigning 12 ascending variables to the 12 semitones starting from C, which we will manipulate to create chords. For simplification, let's call this ordering the 12-tone array.
 
-<img style="margin: 0 auto; display: block; width : 50%;" src="../../images/orca/12array.png">
+<img style="margin: 0 auto; display: block; width : 25%;" src="../../images/orca/12array.png">
 
 By defining those variables in ascending order, we can fetch the actual 12 tones ordering of notes by executing operations on variables names. We could also choose not to use 12 tones but a particular scale, in which case all interval combinations would create chords diatonic to that scale.
 
 With this 12-tone array, one can go from C (var 0) to D (var 2) by adding 2 (semitones) to the variables names (or index), which is correct according to music theory. The addition operator (A) outputs the variable name (index) which has to be looked up from the 12-tone array to get the correct note. But if I add 3 to var 9 (which corresponds to the note A), I get 9+3 = var d which is not assigned to a variable. Caution here : because we use variables names that could also be note names (like the d here), we shall be careful in the separation of the two concepts. This is the reason we have to only stay in the interval [0, b] when outputting variables indexes. We can constraint the addition result to this interval by adding a Modulo operator 12(c) after each addition result. If we do not use the quotient to correct to actual octave skip, this effectively wraps every interval into the same octave. This sequence of addition/modulo defines the interval unit logic.
 
-<img style="margin: 0 auto; display: block; width : 50%;" src="../../images/orca/interval.png">
+<img style="margin: 0 auto; display: block; width : 25%;" src="../../images/orca/interval.png">
 
 The number of notes in a chord only depend on how many times you repeat this interval unit. Here is an example of 4-notes chord, a Cmin7 (Root : C (var 0), Intervals = [3, 7, 10(=a)])
 

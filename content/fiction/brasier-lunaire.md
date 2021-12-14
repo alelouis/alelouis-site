@@ -1,4 +1,5 @@
 ---
+template: fiction_page.html
 title: Brasier Lunaire
 author: Alexis LOUIS
 date: 2020-05-05

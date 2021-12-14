@@ -1,7 +1,6 @@
 ---
 title: Having fun with covariance matrices
 ---
-# **Short introduction to transformation matrices**
 
 **Matrices are a simple yet vast topic.** Actually, one can project all sorts of things onto this conceptual object, geometrical transformation being one of them.
 

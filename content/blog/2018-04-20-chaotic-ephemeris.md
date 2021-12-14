@@ -2,9 +2,6 @@
 title: The chaotic ephemeris of Trisolarians
 ---
 
-<img style="margin: 0 auto; display: block; width : 100%;" src="../../images/trisolaris/trajectories.svg">  
-<br/>
-
 <span style="color:#ff6872">Spoiler alert : before reading this post, you should read the [Three Body Problem from Cixin Liu](https://www.amazon.fr/dp/B00S8FCJCQ/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1?target="_blank"). This post contains spoilers.</span>
 
 Following a first contact with a distant alien civilization, a secret organization launches a virtual reality simulation of an irrational world. What we call Stable and Chaotic Eras follows one after another without any apparent logic. While in chaotic eras, day’s durations are unpredictable. Temperatures can drop or rise in a matter of minutes setting ablaze the entire planet surface. New players have one goal : explaining rationally the incomprehensible.
@@ -76,11 +73,7 @@ If you want to invest a few hours worth of your life in something, you can start
 
 The elements disclosed in this post are details compared to the whole plot of the series and knowing them will not ruin — if you were to engage it — your reading experience.
 
-**Finally, here is the magnificent Trisolar dance animated :**
+**Finally, here is the magnificent Trisolar dance :**
 
-<div style="text-align:center;">
-<video style="margin: 0 auto; width: 100%; max-width: 1020px; border-style: dotted;" autoplay loop="loop"">
-```<source src="../../images/trisolaris/dance.mp4" type="video/mp4" />```
-</video>
-</div>
-
+<img style="margin: 0 auto; display: block; width : 100%;" src="../../images/trisolaris/trajectories.svg">  
+<br/>

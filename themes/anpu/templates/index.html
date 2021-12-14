@@ -44,9 +44,9 @@
     <a class="skip-main" href="#main">Skip to content</a>
     <div class="container">
         <header> 
-            <h1 class="site-header">
-                <a href="{{ config.base_url }}">{{ config.title }}</a>
-            </h1>
+            <span class="site-header">
+                <a href="{{ config.base_url }}">~/home/{{ config.title }}</a>
+            </span>
             <nav>
                 {% block sidebar_nav %}
                 {% for menu_link in config.extra.anpu_menu_links %}
@@ -72,12 +72,15 @@
         </main>
         <footer>
             <p>
-                © {{ config.title }} {{ now() | date(format="%Y") }}
+                © {{ config.title }} {{ now() | date(format="%Y") }} 
+                <a href="https://github.com/alelouis"><img style="margin: -0.2em 0; display: inline; width : 1em;" src="../../images/icons/github-outline.svg"></a>
+                <a href="https://twitter.com/_alelouis"><img style="margin: -0.2em 0; display: inline; width : 1em;" src="../../images/icons/twitter-outline.svg"></a>
             </p>
             <p>
                 {% block footer %}
                 {% endblock footer %}
             </p>
+            
         </footer>
     </div>
 </body>

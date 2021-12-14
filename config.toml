@@ -23,8 +23,8 @@ highlight_theme = 'agola-dark'
 
 [extra]
 anpu_menu_links = [
-{ url = "$BASE_URL/", name = "Home" },
-{ url = "$BASE_URL/blog/", name = "Blog" },
-{ url = "$BASE_URL/fiction/", name = "Fiction" },
+{ url = "$BASE_URL/", name = "cd" },
+{ url = "$BASE_URL/blog/", name = "/blog" },
+{ url = "$BASE_URL/fiction/", name = "/fiction" },
 ]
 anpu_date_format = "%e %B %Y"

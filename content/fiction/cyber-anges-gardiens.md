@@ -1,4 +1,5 @@
 ---
+template: fiction_page.html
 title: Cyber Anges Gardiens
 author: Alexis LOUIS
 date: 2020-09-19

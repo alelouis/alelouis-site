@@ -12,7 +12,7 @@ Mental models also involves linking and viewing the same ideas from various pers
 - Conditional density : $p(x\mid \theta)$
 - Likelihood : $L(\theta\mid x)$
 
-<span style="color:red">Warning : this is not supposed to be a rigorous approach by any means, just intermediates mental models that could help some of you gaining intuitions about the formulas.</span>
+<span class="warning">Warning : this is not supposed to be a rigorous approach by any means, just intermediates mental models that could help some of you gaining intuitions about the formulas.</span>
 
 ## Joint probability density
 Joint density describe co-occurrence of events. In terms of continuous densities they are often noted as follow :  
@@ -28,7 +28,7 @@ $$\iint p(x,\theta)\;dxd\theta= 1$$
 We can fix any of the random variables and see the behavior of the other variables by **slicing** the joint density (red and blue lines).
 Note that $p(x=0,\theta)$ and $p(x,\theta=0)$ are not probability densities as they don't integrate to 1.
 
-<img style="margin: 0 auto; display: block; width : 80%;" src="../../images/visual_prob/joint_slices.svg">
+<img style="margin: 0 auto; display: block; width : 60%;" src="../../images/visual_prob/joint_slices.svg">
 
 The whole shape of the curve is nonetheless interesting as we will see in conditional densities part.
 If we were to integrate either of those curves it would give us the **marginal** probabilities of the parameters at the fixed value. For instance :  
@@ -87,7 +87,7 @@ When considering $p(x\mid \theta)$ visually, each slice direction represents res
 
 $$L(\theta\mid x) = p(x\mid \theta)$$  
 
-<img style="margin: 0 auto; display: block; width : 80%;" src="../../images/visual_prob/likeliarea.svg">  
+<img style="margin: 0 auto; display: block; width : 60%;" src="../../images/visual_prob/likeliarea.svg">  
 
 A nice intuition you can take from this is that it is now **obvious** that likelihood is **not** a probability density (even if its confusing looking at the definition).
 

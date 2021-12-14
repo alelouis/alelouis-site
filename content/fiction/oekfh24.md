@@ -1,4 +1,5 @@
 ---
+template: fiction_page.html
 title: oekfh24
 author: Alexis LOUIS
 date: 2020-12-31
@@ -16,7 +17,7 @@ Charlotte, qui au fond d’elle même attendait avec impatience que ces Robots l
 — Ça va me libérer du temps oui ! Pour lire, pour me reposer, pour penser à autre chose. J’en ai marre de gérer trois gosses, quatre si je te compte dedans !
 — Et c’est reparti… Il lui tourna le dos et s’en alla.
 François claqua la porte de la maison et se dirigea vers la gare la plus proche. 
-\
+
 Une fois arrivé, il se dirigea vers le café central, commanda un Espresso et s’assit à une table haute. Il sortit son ordinateur portable de son sac à dos. A son trousseau de clés était accroché une clé USB en métal. Il la détacha soigneusement et la brancha sur son ordinateur portable. Il démarra le PC en lançant le système d’exploitation présent sur la clé. 
 Il regardait autour de lui tout en prenant une gorgée de son café encore brûlant.
 Il chercha le Wi-Fi de la gare. Se connectant au réseau Tor, il ouvrit un navigateur et tapa une adresse du DarkNet qu’il connaissait par coeur. C’était une boîte de messagerie, quatorze messages non lus. Il les passa en revue.
@@ -42,7 +43,7 @@ Nos craintes sont confirmées. J’ai réussi à pénétrer la couche réseau du
 	- Le flux vidéo/audio passe par le module d’inférence neuronal. Chaque image est donc analysée par la machine, même sans connexion. Si quelque chose d’anormal est détecté (cf. Rapport DeepSpy de fodik67) le flux est tagué et placé en priorité dans la queue de téléchargement. L’adresse IP de réception est aussi différente dans ce cas là.
 Je n’ai toujours pas de solution pour bloquer les communication sans que ça fasse péter autre chose. J’ai peur qu’on doivent jouer le scénario poupée pendant plus longtemps que prévu.
 idsfl35.*
-\
+
 Le *scénario poupée* était le nom de code d’une attitude à tenir lors des premières interactions avec les Robots. En résumé, cela consiste à jouer l’humain normal, fatigué, ennuyeux, aux intérêts banals et sans grande intelligence.
 L’homme qui s’était assis à sa droite n’avait toujours pas tourné la page de son journal qu’il avait ouvert dix minutes plus tôt. François fit semblant de faire tomber sa serviette par-terre. En se levant de sa chaise pour la ramasser, il jeta un coup d’oeil vers lui. Il ne voyait pas ses yeux, seulement son haut de forme un peu ridicule. Il n’avait rien commandé au café.
 — T’es parano François, se dit-il immédiatement. 
@@ -50,13 +51,13 @@ Il essayait de se convaincre qu’il n’y avait rien d’anormal.
 — Tu finis ce que tu as à faire et tu t’en vas, n’éveille pas les soupçons, pensa-t-il.
 Une fois la serviette ramassée, il s’installa de nouveau devant son écran. Il allait finir son rapport et l’envoyer à l’ensemble de la communauté.
 
-*En conclusion de ce rapport, je rappelle des différentes avancées de mes travaux: 
-- Un outil de leurrage par attaque adversaire de l’environnement audio est proposé. Il permet de parler librement à l’air libre sans que les paroles soient interprétées par les Bot-AEC.
-- En simplifiant, il suffit de diffuser sur des enceintes une musique ayant été traitée par mon outil. L’algorithme détaillé ci-dessus altère sans perception audible les formes d’ondes audio pour l’humain. En revanche, ces subtiles modifications choisies non aléatoirement mènent le module de reconnaissance de parole Bot-AEC à n’identifier que du bruit ambiant (testé jusqu’à la version 1.1.2).
-- Une probabilité de l’ordre de un pour un million provoque des interprétations de paroles hors distribution. C’est à dire que le Bot va interpréter une phrase erronée, dont la syntaxe grammaticale sera correcte mais n’aura aucun sens intelligible. J’estime cependant le risque de découverte du stratagème très faible: aucun système à notre connaissance n’est prévu pour lever des alertes en cas de prononciation de non sens.
-- Les performances atteintes permettent son utilisation domestique généralisée. Je demande que cet outil soit généralisé et que la distribution soit assurée au sein du réseau. J’aurai aussi besoin de volontaires pour m’aider à consolider le développement.
+*En conclusion de ce rapport, je rappelle des différentes avancées de mes travaux:
+— Un outil de leurrage par attaque adversaire de l’environnement audio est proposé. Il permet de parler librement à l’air libre sans que les paroles soient interprétées par les Bot-AEC.
+— En simplifiant, il suffit de diffuser sur des enceintes une musique ayant été traitée par mon outil. L’algorithme détaillé ci-dessus altère sans perception audible les formes d’ondes audio pour l’humain. En revanche, ces subtiles modifications choisies non aléatoirement mènent le module de reconnaissance de parole Bot-AEC à n’identifier que du bruit ambiant (testé jusqu’à la version 1.1.2).
+— Une probabilité de l’ordre de un pour un million provoque des interprétations de paroles hors distribution. C’est à dire que le Bot va interpréter une phrase erronée, dont la syntaxe grammaticale sera correcte mais n’aura aucun sens intelligible. J’estime cependant le risque de découverte du stratagème très faible: aucun système à notre connaissance n’est prévu pour lever des alertes en cas de prononciation de non sens.
+— Les performances atteintes permettent son utilisation domestique généralisée. Je demande que cet outil soit généralisé et que la distribution soit assurée au sein du réseau. J’aurai aussi besoin de volontaires pour m’aider à consolider le développement.
 oekfh24.*
-\
+
 François ferma son PC, salua les personnes autour de lui et s’en alla.
 Il décida d'aller prendre une bière rousse au bar d'à côté avant de rentrer chez lui. 
 Charlotte l'attendait.
@@ -81,7 +82,7 @@ Toujours rien, même les commandes spéciales d'administration ne répondent pas
 — Merci Jean, pour être honnête je suis un peu jaloux, ton feu est magnifique!
 — Merci François, c'est mon premier, répondit le robot.
 Dans la soirée, Jean aida à préparer le dîner, à faire la vaisselle et même à coucher les enfants en leur racontant des contes inédits.
-\
+
 La famille Devard se couchait, Jean resterait debout dans le noir, au milieu du salon. Les données emmagasinées de la journée seraient analysées, synthétisées puis organisées pour envoi à la centrale informatique gouvernementale.
 Le lendemain matin, le petit déjeuner était prêt. François était fou de rage, mais ne le montrait pas. Le pire pour lui: les pancakes étaient délicieux. Les discussions matinales qui d'habitude se limitaient au strict nécessaire pour permettre un réveil en douceur étaient, ce matin, agitées. Jean avait un grand nombre de sujets de conversation et relançait chaque membre de la famille sur leurs hobbies respectifs. Charlotte, sans surprise, était déjà sous le charme de cet être de métal et de plastique. Les enfants voyaient déjà en lui un ami fidèle. Ils ne savaient pas que leurs visages seraient pris en photo quotidiennement et alimenteraient un registre massif de chaque citoyen. Il ne savaient pas non plus qu'un profil psychologique incrémental serait évalué, stocké et utilisé en cas d'actions en justice. Sans parler de l'estimation du quotient intellectuel, du potentiel criminel et des orientations politiques de chacun. A dix heures du matin, il ne pouvait déjà plus supporter la présence de cet espion dans sa maison. Pour prendre l'air, François dit qu'il allait chercher le pain. Naturellement, Jean se proposa d'y aller à sa place ou bien de l'y accompagner. Ce à quoi répondit François.
 — Mes deux jambes fonctionnent encore, merci. François n'était pas une poupée parfaite, il le savait.

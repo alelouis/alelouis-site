@@ -5,6 +5,13 @@
 
 {% block content %}
 
+<script>
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    } 
+</script>
+
 <article class="post">
     <header>
         <h1>{{ page.title }}</h1>
@@ -12,7 +19,9 @@
     <div class="content">
         {{ page.content | safe }}
     </div>
-
+    <a onclick="topFunction()" style="cursor:pointer;">Get back to top
+        <img style="margin: -0.2em 0; display: inline; width : 1em;" src="../../images/icons/corner-right-up-outline.svg">
+    </a> 
     {{ page_macros::page_info(page=page) }}
 </article>
 

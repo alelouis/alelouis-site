@@ -1,4 +1,5 @@
 ---
+template: fiction_page.html
 title: Le Spleen du Robot
 author: Alexis LOUIS
 date: 2021-10-30
@@ -38,7 +39,7 @@ Non. Non, pas comme ça ! Le robot s’immobilisa et fixa, d’un air étrangeme
 — La table repose sur deux tréteaux, si tu saisies uniquement la planche tu ne déplaces pas toute la table, mais seulement la planche, tu comprends ?
 Après quelques instants, le robot prit un ton insolent, malheureusement habituel.
 — Je déplace la planche puis les tréteaux: en somme, je déplace la table.
-Ce cocktail de rage, de ras-le-bol et de peine — sur fond de la désespoir — était bien connu d'Elise. Si bien connu qu'elle en avait développé un accoutumance perverse.
+Ce cocktail de rage, de ras-le-bol et de peine — sur fond de désespoir — était bien connu d'Elise. Si bien connu qu'elle en avait développé un accoutumance perverse.
 Elle se résolu à ne plus dire mot jusqu’au soir. Quand vint l’heure de dîner, le silence devenait assourdissant. Pendant la moitié du repas, voulant éviter à tout prix la confrontation — inévitable, comme tous les soirs —, Elise fixait l'intérieur de son assiette. Comme si le plus captivant des paysages s'y trouvait, elle ne détourna pas son regard. Coquillettes et épinards.
 — Ça va ? bien qu’elle détesta cette formulation, elle ne trouva rien de mieux sur le moment.
 — Non, RESET moi.
