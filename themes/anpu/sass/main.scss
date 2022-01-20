@@ -2,9 +2,15 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300&display=swap');
+
+@font-face {
+    font-family: 'Monaco';
+    src: url("fonts/monaco.ttf") format("opentype");
+ }
 
 html {
-    font-family: 'Source Code Pro', -apple-system, BlinkMacSystemFont, 'Montserrat', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Source Serif Pro', -apple-system, BlinkMacSystemFont, 'Montserrat', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* 1 */
     -ms-text-size-adjust: 100%;
     /* 2 */
@@ -16,16 +22,28 @@ body {
     margin: 0;
     background: #1e1d22;
     color: rgb(143, 136, 156);
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     text-align: justify;
     text-justify: inter-word;
 }
 
-h1,h2,span.katex-html,a,strong {
+h1,h2,span.katex-html,a {
     color: rgb(202, 197, 211);
     text-shadow: 0 0 10px #cac2f033;
+    font-size: 0.9em;
+}
+
+h1, h2 {
+    font-family: "Monaco";
+}
+
+strong {
+    color: #db7c6d;
+    text-shadow: 0 0 10px #cac2f033;
+    font-family: "Monaco";
+    font-size: 0.85em;
 }
 
 article,
@@ -181,11 +199,17 @@ pre {
     
 }
 
+code {
+    background-color: #31333d;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
 code,
 pre,
 kbd {
-    font-family: 'Source Code Pro';
-    font-size: 1em;
+    font-family: 'Monaco';
+    font-size: 0.9em;
     line-height: 154%;
     border-radius: 8px;
     color: #cac5d3;
@@ -230,12 +254,14 @@ header h1 {
     margin-top: 1em;
     margin-bottom: 0;
     font-weight: normal;
+    font-family: 'Monaco';
 }
 
 header h2 {
     font-size: 1em;
     margin: 0;
     font-weight: normal;
+    font-family: 'Monaco';
 }
 
 header nav {
@@ -243,14 +269,18 @@ header nav {
     max-width: 100%;
     text-align: right;
     margin-bottom: 1em;
+    font-family: 'Monaco';
 }
 
 header nav a {
     margin-left: 2em;
+    font-family: 'Monaco';
 }
 
 header a {
     color: rgb(120, 115, 131);
+    font-family: 'Monaco';
+    font-size: 17px;
 }
 
 .site-header {
@@ -320,6 +350,7 @@ article header h1 a {
 
 .article-date {
     white-space: nowrap;
+    font-family: 'Monaco';
 }
 
 .article-categories {
@@ -501,3 +532,4 @@ ul.language-select > li {
     background: rgb(120, 115, 131);
     width: 10px;
   } 
+

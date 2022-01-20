@@ -49,7 +49,23 @@ You know well enough to go through the next section : making arpeggiators out of
 
 ## Iterators are all you need
 
+We need some chord to iterate on. My library **mumuse** exposes the `Chord` struct, which itself contains a vector of `Note` structs. I will use a **D Minor 7th** chord. This chord happens the natural chord built from the 2nd degree of the **C Major** scale. This isn't a music theory 101 article so here is the code to create such chord.
+
+```rust
+pub fn get_notes(n: usize) -> Vec<Note> {
+    Scale::major(Note::try_from("C3").unwrap()).two(n).notes
+}
+```
+
+The function `get_notes()` use the `Scale` struct in order to retrieve the second (`two`) chord with `n` notes. The field `notes` of the `Chord`, which is of type `Vec<Note>`, is then returned. All is set up in order to start building arpeggiators !
+
 ### Up
+
+This one is an easy one. The **Up** arpeggiator plays notes bottom up. This is the default behavior of an iterator on a vector, so the implementation is straightforward.
+
+```rust
+let up = get_notes(n).into_iter();
+```
 
 <img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/up.svg">
 <audio style="margin: 0 auto; display: block; width : 70%;" controls>
@@ -58,12 +74,23 @@ You know well enough to go through the next section : making arpeggiators out of
 
 ### Down
 
+```rust
+let down = get_notes(n).into_iter().rev();
+```
+
 <img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/down.svg">
 <audio style="margin: 0 auto; display: block; width : 70%;" controls>
     <source src="../../images/music_iterators/down.wav" type="audio/wav">
 </audio> 
 
 ### Up Down
+
+```rust
+let up_down = get_notes(n)
+    .into_iter()
+    .take(n - 1)
+    .chain(get_notes(n).into_iter().rev().take(n - 1));
+```
 
 <img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/up_down.svg">
 <audio style="margin: 0 auto; display: block; width : 70%;" controls>
@@ -72,12 +99,26 @@ You know well enough to go through the next section : making arpeggiators out of
 
 ### Down Up
 
+```rust
+let down_up = get_notes(n)
+    .into_iter()
+    .rev()
+    .take(n - 1)
+    .chain(get_notes(n).into_iter().take(n - 1));
+```
+
 <img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/down_up.svg">
 <audio style="margin: 0 auto; display: block; width : 70%;" controls>
     <source src="../../images/music_iterators/down_up.wav" type="audio/wav">
 </audio> 
 
 ### Up And Down
+
+```rust
+let up_and_down = get_notes(n)
+    .into_iter()
+    .chain(get_notes(n).into_iter().rev());
+```
 
 <img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/up_and_down.svg">
 <audio style="margin: 0 auto; display: block; width : 70%;" controls>
@@ -86,12 +127,26 @@ You know well enough to go through the next section : making arpeggiators out of
 
 ### Down And Up
 
+```rust
+let down_and_up = get_notes(n)
+    .into_iter()
+    .rev()
+    .chain(get_notes(n).into_iter());
+```
+
 <img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/down_and_up.svg">
 <audio style="margin: 0 auto; display: block; width : 70%;" controls>
     <source src="../../images/music_iterators/down_and_up.wav" type="audio/wav">
 </audio> 
 
 ### Converge
+
+```rust
+let converge = get_notes(n)
+    .into_iter()
+    .interleave(get_notes(n).into_iter().rev())
+    .take(n);
+```
 
 <img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/converge.svg">
 <audio style="margin: 0 auto; display: block; width : 70%;" controls>
@@ -100,12 +155,31 @@ You know well enough to go through the next section : making arpeggiators out of
 
 ### Diverge
 
+```rust
+let diverge = get_notes(n)
+    .into_iter()
+    .interleave(get_notes(n).into_iter().rev())
+    .take(n)
+    .clone()
+    .collect_vec()
+    .into_iter()
+    .rev();
+```
+
 <img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/diverge.svg">
 <audio style="margin: 0 auto; display: block; width : 70%;" controls>
     <source src="../../images/music_iterators/diverge.wav" type="audio/wav">
 </audio> 
 
 ### Pinky Up
+
+```rust
+let pinky_up = get_notes(n)
+    .into_iter()
+    .take(n)
+    .intersperse(get_notes(n)[n - 1])
+    .take(2 * (n - 1));
+```
 
 <img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/pinky_up.svg">
 <audio style="margin: 0 auto; display: block; width : 70%;" controls>
@@ -114,6 +188,15 @@ You know well enough to go through the next section : making arpeggiators out of
 
 ### Pinky Up Down
 
+```rust
+let pinky_up_down = get_notes(n)
+    .into_iter()
+    .take(n - 1)
+    .chain(get_notes(n).into_iter().take(n - 2).rev())
+    .intersperse(get_notes(n)[n - 1])
+    .take(4 * (n - 2));
+```
+
 <img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/pinky_up_down.svg">
 <audio style="margin: 0 auto; display: block; width : 70%;" controls>
     <source src="../../images/music_iterators/pinky_up_down.wav" type="audio/wav">
@@ -121,12 +204,30 @@ You know well enough to go through the next section : making arpeggiators out of
 
 ### Thumb Up
 
+```rust
+let thumb_up = get_notes(n)
+    .into_iter()
+    .intersperse(get_notes(n)[0])
+    .skip(1)
+    .take(2 * (n - 1));
+```
+
 <img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/thumb_up.svg">
 <audio style="margin: 0 auto; display: block; width : 70%;" controls>
     <source src="../../images/music_iterators/thumb_up.wav" type="audio/wav">
 </audio> 
 
 ### Thumb Up Down
+
+```rust
+let thumb_up_down = get_notes(n)
+    .into_iter()
+    .take(n)
+    .chain(get_notes(n).into_iter().take(n - 1).rev())
+    .intersperse(get_notes(n)[0])
+    .skip(1)
+    .take(4 * (n - 2));
+```
 
 <img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/thumb_up_down.svg">
 <audio style="margin: 0 auto; display: block; width : 70%;" controls>
