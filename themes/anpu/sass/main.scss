@@ -178,15 +178,19 @@ pre {
     background-color: rgb(120, 115, 131);
     max-width: 100%;
     overflow: auto;
+    
 }
 
 code,
 pre,
 kbd {
     font-family: 'Source Code Pro';
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 154%;
     border-radius: 8px;
+    color: #cac5d3;
+    text-shadow: 0 0 10px #cac2f033;
+    
 }
 
 /* Styles */

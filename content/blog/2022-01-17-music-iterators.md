@@ -30,13 +30,13 @@ Well, not going through the horrendous details, an iterator is something that it
 
 Consider this list of integer : `[1, 2, 3, 4]`. An iterator would go through all the values independently. What's interesting is that we can, in a functional fashion, modify the behavior or effect of an iterator. We can apply **iterators methods**. In Rust, iterators methods can be one of two types : **adapters** or **consumers**. 
 
-**Adapters** method return other iterators while consumers *consume* the iterator and yield values, vectors or other things that are not iterators. Also, when adapters are used, for example with a `map` : 
+**Adapters** methods return other iterators while consumers *consume* the iterator and output values, vectors or other things that are not iterators. E.g with a popular adapter method : `map` : 
 
 ```rust 
 let var = (1..4).map(|value| value * 2);
 ```
 
-The `map` method takes as an argument a closure (anonymous function) the will be applied for each value encountered in `var`. Here, the closure simply multiplies the current value by `2`. Note that the computation isn't actually performed, the `var` isn't equal to `[2, 3, 6, 8]` after this line. Instead, `var` is lazy evaluated : each value will be computed only when their are needed in the program.
+The `map` method takes as an argument a closure (anonymous function) the will be applied on each value encountered in `var`. In this example, the closure simply multiplies the current value by `2`. Note that the computation isn't actually performed, the `var` isn't equal to `[2, 3, 6, 8]` after this line. Instead, `var` is lazy evaluated : each value will be computed only when their are needed in the program.
 
 **Consumers** eat that damn iterator and poop another useful value (yea, not the best metaphor). The simplest consumer method could be the `sum` method.
 
@@ -48,3 +48,87 @@ The `sum` method is applied to the iterator , itself adapted with a `map`. So `v
 You know well enough to go through the next section : making arpeggiators out of iterators !
 
 ## Iterators are all you need
+
+### Up
+
+<img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/up.svg">
+<audio style="margin: 0 auto; display: block; width : 70%;" controls>
+    <source src="../../images/music_iterators/up.wav" type="audio/wav">
+</audio> 
+
+### Down
+
+<img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/down.svg">
+<audio style="margin: 0 auto; display: block; width : 70%;" controls>
+    <source src="../../images/music_iterators/down.wav" type="audio/wav">
+</audio> 
+
+### Up Down
+
+<img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/up_down.svg">
+<audio style="margin: 0 auto; display: block; width : 70%;" controls>
+    <source src="../../images/music_iterators/up_down.wav" type="audio/wav">
+</audio> 
+
+### Down Up
+
+<img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/down_up.svg">
+<audio style="margin: 0 auto; display: block; width : 70%;" controls>
+    <source src="../../images/music_iterators/down_up.wav" type="audio/wav">
+</audio> 
+
+### Up And Down
+
+<img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/up_and_down.svg">
+<audio style="margin: 0 auto; display: block; width : 70%;" controls>
+    <source src="../../images/music_iterators/up_and_down.wav" type="audio/wav">
+</audio> 
+
+### Down And Up
+
+<img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/down_and_up.svg">
+<audio style="margin: 0 auto; display: block; width : 70%;" controls>
+    <source src="../../images/music_iterators/down_and_up.wav" type="audio/wav">
+</audio> 
+
+### Converge
+
+<img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/converge.svg">
+<audio style="margin: 0 auto; display: block; width : 70%;" controls>
+    <source src="../../images/music_iterators/converge.wav" type="audio/wav">
+</audio> 
+
+### Diverge
+
+<img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/diverge.svg">
+<audio style="margin: 0 auto; display: block; width : 70%;" controls>
+    <source src="../../images/music_iterators/diverge.wav" type="audio/wav">
+</audio> 
+
+### Pinky Up
+
+<img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/pinky_up.svg">
+<audio style="margin: 0 auto; display: block; width : 70%;" controls>
+    <source src="../../images/music_iterators/pinky_up.wav" type="audio/wav">
+</audio> 
+
+### Pinky Up Down
+
+<img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/pinky_up_down.svg">
+<audio style="margin: 0 auto; display: block; width : 70%;" controls>
+    <source src="../../images/music_iterators/pinky_up_down.wav" type="audio/wav">
+</audio> 
+
+### Thumb Up
+
+<img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/thumb_up.svg">
+<audio style="margin: 0 auto; display: block; width : 70%;" controls>
+    <source src="../../images/music_iterators/thumb_up.wav" type="audio/wav">
+</audio> 
+
+### Thumb Up Down
+
+<img style="margin: 0 auto; display: block; width : 70%;" src="../../images/music_iterators/thumb_up_down.svg">
+<audio style="margin: 0 auto; display: block; width : 70%;" controls>
+    <source src="../../images/music_iterators/thumb_up_down.wav" type="audio/wav">
+</audio> 
