@@ -1,6 +1,5 @@
 ---
 title: Rebuilding arpeggiators with Rust iterators
-draft: true
 ---
 
 I often play with [arpeggiators](https://www.sequencer.de/synth/index.php/Arpeggiator), whether they come from my [analog synthesizer](https://www.moogmusic.com/products/sub-37) or from [Ableton Live's](https://www.ableton.com/en/live/) built-in plugin. Arpeggiators are cool for their ability to bring movement to chords, bridging the gap between harmony and melody. By their rhythmic nature, they also are useful if you are looking to lock the tempo in a particular composition.
