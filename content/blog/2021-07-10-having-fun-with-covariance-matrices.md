@@ -150,7 +150,7 @@ Because the main subject of this blog post is not to do a full depth intro to ge
 
 All of this is **spicy**, but let's move on the today's topic: **covariance matrices**.
 
-# **Covariance matrices**
+# Covariance matrices
 Before even talking about co-variance, I need to introduce its friend : **variance**.
 Variance is a measure of something varying in function of another. The **variance** defines itself in a rigorous way as the mean of squared differences to the mean. When talking about random variables one can also use the term expectation for the mean, and notate it $E$. 
 
@@ -273,4 +273,4 @@ R
 Without surprise, they are the same (within sample averaging error).
 
 # Conclusion
-This little code section concludes this post about transformation and covariances matrices! There is so much more intuition to gain here, I hope your curiosity was tickled and you learned something. I can't recommend enough the Essence Of Linear Algebra serie by 3Blue1Brown [(check it out on Youtube)](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw) that goes over the geometrical interpretation of Linear Algebra concepts in a very visual way.
+This little code section concludes this post about transformation and covariances matrices! There is so much more intuition to gain here, I hope your curiosity was tickled and you learned something. I can't recommend enough the **Essence Of Linear Algebra** serie by **3Blue1Brown** [(check it out on Youtube)](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw) that goes over the geometrical interpretation of Linear Algebra concepts in a very visual way.
