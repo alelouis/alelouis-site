@@ -334,7 +334,6 @@ article header h1 a {
 .article-info {
     font-size: 0.75em;
     color: rgb(181, 174, 196);
-    margin-top: 1em;
     text-shadow: 0 0 10px #cac2f05d;
 }
 
@@ -358,6 +357,8 @@ article header h1 a {
 .article-date {
     white-space: nowrap;
     font-family: 'Monaco';
+    line-height: 1.5;
+    float: top;
 }
 
 .article-categories {
