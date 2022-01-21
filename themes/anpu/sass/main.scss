@@ -21,7 +21,7 @@ html {
 body {
     margin: 0;
     background: #1e1d22;
-    color: rgb(143, 136, 156);
+    color: rgb(156, 148, 170);
     font-size: 20px;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -29,14 +29,21 @@ body {
     text-justify: inter-word;
 }
 
-h1,h2,span.katex-html,a {
+h1,h2,span.katex-html {
     color: rgb(202, 197, 211);
     text-shadow: 0 0 10px #cac2f033;
     font-size: 0.9em;
 }
 
-h1, h2 {
+a {
+    color: rgb(190, 155, 255);
+    text-shadow: 0 0 10px #8f79ff8e;
+}
+
+h1, h2, h3 {
     font-family: "Monaco";
+    color: rgb(202, 197, 211);
+    text-shadow: 0 0 10px #cac2f033;
 }
 
 strong {
