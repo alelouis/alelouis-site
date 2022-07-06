@@ -1,0 +1,19 @@
+\documentclass[varwidth=true, border=10pt]{standalone}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage[european,straightvoltages]{circuitikz}
+
+\definecolor{bright}{HTML}{d2cec8}
+
+\begin{document}
+
+  \begin{circuitikz}[line width=0.8pt]
+    \ctikzset{bipoles/thickness=1}
+    \draw[color=bright] (0,0)
+    to[V,v=$V_T$] (0,2) % The voltage source
+    to[R=$R$,v=$V_R$] (4,2)
+    to[C=$C$,v=$V_C$] (4,0) % The resistor
+    to[short] (0,0);
+  \end{circuitikz}
+
+\end{document}
