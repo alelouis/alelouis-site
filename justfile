@@ -2,7 +2,7 @@ build:
     zola build
 serve:
     zola serve --drafts -f
-publish:
+publish: build
     rsync -aP public/ alelouis@ovh:/home/alelouis/alelouis.eu
-figures:
-    python -m code.generate_figures
+figures module='':
+    python -m code.generate_figures {{module}}

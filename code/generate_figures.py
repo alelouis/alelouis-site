@@ -5,6 +5,7 @@ import os
 from matplotlib import rcParams
 from tqdm import tqdm
 import warnings
+import sys
 warnings.filterwarnings("ignore")
 
 MATPLOT_STYLE = './code/mplrc'
@@ -24,7 +25,11 @@ for font in font_manager.findSystemFonts(font_dir):
     font_manager.fontManager.addfont(font)
 rcParams['font.family'] = FONT
 
-files = [f.path for f in os.scandir('./code/') if f.is_dir() and ignore(f, IGNORES)]
+if len(sys.argv) == 2:
+    module_name = sys.argv[1]
+    files = [f'./code/{module_name}']
+else:
+    files = [f.path for f in os.scandir('./code/') if f.is_dir() and ignore(f, IGNORES)]
 
 pbar = tqdm(files)
 for file in pbar:
